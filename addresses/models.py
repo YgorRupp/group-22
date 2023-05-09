@@ -10,6 +10,3 @@ class Address(models.Model):
     user = models.OneToOneField(
         "users.User", on_delete=models.CASCADE, related_name="address"
     )
-
-
-# Usuário deve ter uma relacionamento com um campo de endereço.

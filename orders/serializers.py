@@ -46,7 +46,6 @@ class OrderSerializer(serializers.ModelSerializer):
         user_email = self.user.email
 
         for key, value in validated_data.items():
-            # so vendedor pode alterar status
             if key == "status" and value != "Order placed":
                 send_mail(
                     subject="Order Status",
